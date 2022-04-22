@@ -76,18 +76,30 @@ menu = prompt.select("Select from menu".colorize(:green)) do |choice|
 end
 
 puts menu
-if menu == 'What is 5x5?'
+if menu == 1
+  puts "\e[H\e[2J"
   puts descr.colorize(:green)
-elsif menu == 'Week 1 Exercises'
+elsif menu == 2
+  puts "\e[H\e[2J"
   puts week1.colorize(:green)
-elsif menu == 'Week 2 Exercises' 
+elsif menu == 3
+  puts "\e[H\e[2J"
   puts week2.colorize(:green)
-elsif menu == 'Log a workout' 
+elsif menu == 4
+  puts "\e[H\e[2J"
   array.push(workout())
-elsif menu == 'View Logs'
+  # prompt.yes?("Would you like to log another exercise?") do |q|
+  #   q.suffix "Yes/No"
+  #   if yes array.push(workout())
+  #   else
+    # end
+elsif menu == 5
+  puts "\e[H\e[2J"
   puts array 
-elsif menu == 'Exit'
+elsif menu == 6
   puts "Good-bye!".colorize(:red)
+  exit
 else
+  puts "Please select a valid input!"
 end
 end
