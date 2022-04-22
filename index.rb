@@ -37,29 +37,32 @@ banner = """
 
 puts banner.colorize(:yellow)
 puts'Welcome to the 5x5 Workout terminal application! Please select a number from 1-5'.colorize(:light_blue) 
-loop do
+# loop do
   
-  puts "\n1) WHAT IS 5X5\n2) WEEK 1 EXERCISES\n3) WEEK 2 EXERCISES\n4) LOG A WORKOUT\n5) VIEW WORKOUT LOG\n6) EXIT".colorize(:blue)
-  input = $stdin.gets.chomp.to_i
-  case input
-  when 1
-    puts descr.colorize(:green)
-    # puts "Return to menu? y/n"
-    #  if y returns to main menu, otherwise exits?
-  when 2
-    puts week1.colorize(:green)
-  when 3
-    puts week2.colorize(:green)
-  when 4
-    array.push(workout())
-  when 5
-    puts array
-  when 6
-    puts 'Goodbye!'.colorize(:red)
-    exit
-  else
-    puts "#{input} is not valid. Please select 1-5 and press enter!".colorize(:red)
-  end
-end
+#   puts "\n1) WHAT IS 5X5\n2) WEEK 1 EXERCISES\n3) WEEK 2 EXERCISES\n4) LOG A WORKOUT\n5) VIEW WORKOUT LOG\n6) EXIT".colorize(:blue)
+#   input = $stdin.gets.chomp.to_i
+#   case input
+#   when 1
+#     puts descr.colorize(:green)
+#     # puts "Return to menu? y/n"
+#     #  if y returns to main menu, otherwise exits?
+#   when 2
+#     puts week1.colorize(:green)
+#   when 3
+#     puts week2.colorize(:green)
+#   when 4
+#     array.push(workout())
+#   when 5
+#     puts array
+#   when 6
+#     puts 'Goodbye!'.colorize(:red)
+#     exit
+#   else
+#     puts "#{input} is not valid. Please select 1-5 and press enter!".colorize(:red)
+#   end
+# end
 
 # TTY Menu attempt
+prompt = TTY::Prompt.new
+
+prompt.select("Select from the following", %w(ABOUT WEEK-1 WEEK-2 LOG-WORKOUT VIEW-LOGS EXIT ))
