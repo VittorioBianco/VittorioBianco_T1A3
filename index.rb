@@ -88,11 +88,7 @@ elsif menu == 3
 elsif menu == 4
   puts "\e[H\e[2J"
   array.push(workout())
-  # prompt.yes?("Would you like to log another exercise?") do |q|
-  #   q.suffix "Yes/No"
-  #   if yes array.push(workout())
-  #   else
-    # end
+  array.push(workout(prompt.yes?("Do you want to log another workout?")))
 elsif menu == 5
   puts "\e[H\e[2J"
   puts array 
