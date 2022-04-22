@@ -64,14 +64,30 @@ puts'Welcome to the 5x5 Workout terminal application! Please select a number fro
 
 # TTY Menu attempt
 prompt = TTY::Prompt.new
+loop do
+menu = prompt.select("Select from menu".colorize(:green)) do |choice|
+  choice.enum "."
+  choice.choice "What is 5x5?".colorize(:yellow), 1
+  choice.choice "Week 1 Exercises".colorize(:yellow), 2
+  choice.choice "Week 2 Exercises".colorize(:yellow), 3
+  choice.choice "Log a workout".colorize(:yellow), 4
+  choice.choice "View Logs".colorize(:yellow), 5
+  choice.choice "Exit".colorize(:red), 6
+end
 
-# prompt.select("Select from the following", %w(ABOUT WEEK-1 WEEK-2 LOG-WORKOUT VIEW-LOGS EXIT ))
-
-prompt.select("Select from menu") do |menu|
-  menu.choice "What is 5x5?"
-  menu.choice "Week 1 Exercises"
-  menu.choice "Week 2 Exercises"
-  menu.choice "Log a workout"
-  menu.choice "View Logs"
-  menu.choice "Exit"
+puts menu
+if menu == 'What is 5x5?'
+  puts descr.colorize(:green)
+elsif menu == 'Week 1 Exercises'
+  puts week1.colorize(:green)
+elsif menu == 'Week 2 Exercises' 
+  puts week2.colorize(:green)
+elsif menu == 'Log a workout' 
+  array.push(workout())
+elsif menu == 'View Logs'
+  puts array 
+elsif menu == 'Exit'
+  puts "Good-bye!".colorize(:red)
+else
+end
 end
