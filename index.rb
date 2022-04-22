@@ -65,4 +65,13 @@ puts'Welcome to the 5x5 Workout terminal application! Please select a number fro
 # TTY Menu attempt
 prompt = TTY::Prompt.new
 
-prompt.select("Select from the following", %w(ABOUT WEEK-1 WEEK-2 LOG-WORKOUT VIEW-LOGS EXIT ))
+# prompt.select("Select from the following", %w(ABOUT WEEK-1 WEEK-2 LOG-WORKOUT VIEW-LOGS EXIT ))
+
+prompt.select("Select from menu") do |menu|
+  menu.choice "What is 5x5?"
+  menu.choice "Week 1 Exercises"
+  menu.choice "Week 2 Exercises"
+  menu.choice "Log a workout"
+  menu.choice "View Logs"
+  menu.choice "Exit"
+end
