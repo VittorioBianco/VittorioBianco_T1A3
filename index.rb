@@ -1,3 +1,6 @@
+require 'colorize'
+require 'tty-prompt'
+
 banner = """
 
 ███████╗██╗██╗   ██╗███████╗    ██████╗ ██╗   ██╗    ███████╗██╗██╗   ██╗███████╗
@@ -16,21 +19,22 @@ banner = """
                                                                                  
 
 """
-require 'colorize'
-require 'tty-prompt'
+
 descr = File.read('./5x5_workout.txt')
 week1 = File.read('./Week_1.txt')
 week2 = File.read('./Week_2.txt')
 array = []
+wolist = %w(Squats Overhead\ Press Dead\ Lifts Bench\ Press Bent\ Over\ Row)
 
 def workout
-  time = Time.now
+  time = Time.new
   puts "What exercises have you done?"
   exercise = gets.chomp
   puts "How many sets?"
   sets = gets.chomp
-   "You did #{sets} sets of #{exercise} on " + time1.inspect
+   "You did #{sets} sets of #{exercise} on " + time.strftime("%d/%m/%Y") 
 end
+
 def clear
   system("clear")
 end
@@ -62,6 +66,7 @@ elsif menu == 3
   puts week2.colorize(:green)
 elsif menu == 4
   clear
+  puts wolist
   array.push(workout())
   # array.push(workout(prompt.yes?("Do you want to log another workout?")))
 elsif menu == 5
