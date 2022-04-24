@@ -31,7 +31,7 @@ def workout
   puts "What exercises have you done?"
   exercise = gets.chomp
   puts "How many sets?"
-  sets = gets.chomp
+  sets = gets.chomp.to_i
    "You did #{sets} sets of #{exercise} on " + time.strftime("%d/%m/%Y") 
 end
 
@@ -66,9 +66,9 @@ elsif menu == 3
   puts week2.colorize(:green)
 elsif menu == 4
   clear
-  puts wolist
+  pp wolist
+  puts "Which exercise would you like to log?"
   array.push(workout())
-  # array.push(workout(prompt.yes?("Do you want to log another workout?")))
 elsif menu == 5
   clear
   puts array 
@@ -79,3 +79,4 @@ else
   puts "Please select a valid input!"
 end
 end
+
