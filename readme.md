@@ -45,6 +45,15 @@ The coding style was applied via Rubocop.
 
 - [![Ruby Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rubystyle.guide)
 
+## **Trello**
+![Trello 1](./docs/1.png)
+![Trello 2](./docs/2.png)
+![Trello 3](./docs/3.png)
+![Trello 4](./docs/4.png)
+![Trello 5](./docs/5.png)
+![Trello 6](./docs/6.png)
+![Trello 7](./docs/7.png)
+![Trello 8](./docs/8.png)
 ## **Reference Citation**
 
 #### **5x5 workout regiment**
@@ -67,7 +76,6 @@ The coding style was applied via Rubocop.
 - [colorize | RubyGems.org | your community gem host](https://rubygems.org/gems/colorize/versions/0.8.1)
 
 
-### Trello
 
 
 
