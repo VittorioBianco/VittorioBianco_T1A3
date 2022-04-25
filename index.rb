@@ -30,9 +30,9 @@ wolist = ['Squats', 'Overhead Press', 'Dead Lifts', 'Bench Press', 'Bent Over Ro
 
 def workout
   time = Time.new
-  puts 'Which exercise would you like to log?''
+  puts 'Which exercise would you like to log?'
   exercise = gets.chomp
-  puts 'How many sets?'
+  puts 'How many sets did you perform?'
   sets = gets.chomp.to_i
   "You did #{sets} sets of #{exercise} on " + time.strftime('%d/%m/%Y')
 end
@@ -69,15 +69,14 @@ loop do
     puts week2.colorize(:green)
   when 4
     clear
-    pp wolist
+    print wolist
     array.push(workout)
   when 5
     clear
     puts array
   when 6
-    puts 'Good-bye!'.colorize(:red)
+    puts 'Goodbye!'.colorize(:red)
     exit
   else
-    puts 'Please select a valid input!'
   end
 end
