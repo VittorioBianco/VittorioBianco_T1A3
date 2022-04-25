@@ -69,7 +69,7 @@ loop do
     puts week2.colorize(:green)
   when 4
     clear
-    print wolist
+    print "The recommended 5x5 exercises are #{wolist.join(", ")}"
     array.push(workout)
   when 5
     clear
