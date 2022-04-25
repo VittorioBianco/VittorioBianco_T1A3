@@ -2,9 +2,6 @@
 
 ## **Install Guide**
 
-### **Program Installation**
-From the console, enter ./run_app.sh
-
 ### **Gem Installation**
 
 #### **TTY-Prompt**
@@ -18,6 +15,9 @@ From the console enter:
 
 - *gem 'colorize'*
 - *gem install 'colorize'*
+
+### **Program Installation**
+From the console, enter ./run_app.sh
 
 ## **Features**
 
