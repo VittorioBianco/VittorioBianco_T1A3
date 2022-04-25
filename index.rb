@@ -30,10 +30,10 @@ wolist = ['Squats', 'Overhead Press', 'Dead Lifts', 'Bench Press', 'Bent Over Ro
 
 def workout
   time = Time.new
-  puts 'Which exercise would you like to log?'
-  exercise = gets.chomp
-  puts 'How many sets did you perform?'
-  sets = gets.chomp.to_i
+  $stdout.puts 'Which exercise would you like to log?'
+  exercise = $stdin.gets.chomp
+  $stdout.puts 'How many sets did you perform?'
+  sets = $stdin.gets.chomp.to_i
   "You did #{sets} sets of #{exercise} on " + time.strftime('%d/%m/%Y')
 end
 
@@ -60,22 +60,22 @@ loop do
   case menu
   when 1
     clear
-    puts descr.colorize(:green)
+    $stdout.puts descr.colorize(:green)
   when 2
     clear
-    puts week1.colorize(:green)
+    $stdout.puts week1.colorize(:green)
   when 3
     clear
-    puts week2.colorize(:green)
+    $stdout.puts week2.colorize(:green)
   when 4
     clear
-    print "The recommended 5x5 exercises are #{wolist.join(", ")}"
+    $stdout.puts "The recommended 5x5 exercises are #{wolist.join(", ")}"
     array.push(workout)
   when 5
     clear
-    puts array
+    $stdout.puts array
   when 6
-    puts 'Goodbye!'.colorize(:red)
+    $stdout.puts'Goodbye!'.colorize(:red)
     exit
   else
   end
